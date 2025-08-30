@@ -1,0 +1,61 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideIn 0.8s ease-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: 'Orbitron', monospace;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 25%, #ff6b6b 50%, #00d4ff 75%, #00ff88 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 
+    0 0 30px rgba(0, 212, 255, 0.8),
+    0 0 60px rgba(0, 212, 255, 0.4),
+    0 0 90px rgba(0, 212, 255, 0.2);
+  animation: 
+    pulse 3s ease-in-out infinite,
+    gradientFlow 4s ease-in-out infinite;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
